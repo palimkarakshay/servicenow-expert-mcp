@@ -1,11 +1,30 @@
 {
-  "name": "servicenow-mcp",
+  "name": "servicenow-expert-mcp",
   "version": "0.1.0",
-  "private": true,
-  "description": "MCP server for ServiceNow: offline platform knowledge + BYO-credential live Table API tools (incidents, records, queries). Live tools return mode:offline without credentials.",
-  "license": "UNLICENSED",
+  "description": "The ServiceNow MCP server with built-in platform expertise: 30 curated offline reference topics (tables, encoded queries, GlideRecord, ACLs, Flow vs Business Rules, update sets, performance) PLUS BYO-credential live Table API tools. Live tools return mode:offline without credentials — it never fabricates instance data.",
+  "license": "MIT",
   "author": "Akshay Palimkar",
   "type": "module",
+  "homepage": "https://github.com/palimkarakshay/servicenow-expert-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palimkarakshay/servicenow-expert-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/palimkarakshay/servicenow-expert-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "servicenow",
+    "snow",
+    "itsm",
+    "table-api",
+    "gliderecord",
+    "ai-agent",
+    "claude",
+    "llm"
+  ],
   "engines": {
     "node": ">=20"
   },
@@ -16,13 +35,18 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "check": "npm run typecheck && npm run test && npm run build",
+    "prepublishOnly": "npm run check",
     "start": "node dist/cli.js"
   },
   "dependencies": {
