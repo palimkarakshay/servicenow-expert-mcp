@@ -4,7 +4,7 @@ MCP server for **ServiceNow**: offline platform **knowledge** (always available)
 live **Table API** tools (incidents, records, queries, create/update). Live tools return
 `{"mode":"offline"}` without credentials — the same honesty invariant as abap-enclave-mcp / anaplan-kit.
 
-- **Lumivara product line:** Labs (the Anna-pattern, for ServiceNow). PRIVATE for now.
+- **Product line:** Labs (the Anna-pattern, for ServiceNow). PRIVATE for now.
 - Dependency-light: MCP SDK + zod only; live calls use Node's built-in `fetch` (basic auth).
 
 ## Package manager: npm — Node >= 20
